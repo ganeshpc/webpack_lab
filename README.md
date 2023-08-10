@@ -1,4 +1,4 @@
-# Getting Started
+# Example of code split and dynamic loading
 
 ## How to use
 
