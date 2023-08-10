@@ -15,6 +15,7 @@ function createAButton() {
   button.onclick = async () => {
     try {
       // const file = 'js/clickCommand.js';
+      //split
       const command = await import('js/clickCommand.js');
       command.default.execute();
     } catch (err) {
