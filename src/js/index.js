@@ -1,4 +1,4 @@
-import command from 'js/clickCommand.js';
+// import command from 'js/clickCommand.js';
 
 function component() {
   const element = document.createElement('div');
@@ -9,7 +9,6 @@ function component() {
 }
 
 function createAButton() {
-  console.log(command);
   const button = document.createElement('button');
   button.title = 'clickMe';
   button.appendChild(document.createTextNode('clickMe'));
@@ -17,6 +16,7 @@ function createAButton() {
     try {
       // const file = 'js/clickCommand.js';
       const command = await import('js/clickCommand.js');
+      command.default.execute();
     } catch (err) {
       console.error(`err loading command module: ${err}`);
       console.dir(err);
