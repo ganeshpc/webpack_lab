@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "webpack --mode development --watch",
+    "build": "webpack --mode development --watch --stats-error-details",
     "start": "serve dist"
   },
   "keywords": [],

@@ -14,9 +14,9 @@ function createAButton() {
   button.appendChild(document.createTextNode('clickMe'));
   button.onclick = async () => {
     try {
-      // const file = 'js/clickCommand.js';
+      const file = 'clickCommand.js';
       //split
-      const command = await import('js/clickCommand.js');
+      const command = await import(`commands/${file}`);
       command.default.execute();
     } catch (err) {
       console.error(`err loading command module: ${err}`);

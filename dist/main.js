@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/commands lazy recursive ^\\.\\/.*$":
+/*!******************************************************!*\
+  !*** ./src/commands/ lazy ^\.\/.*$ namespace object ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./clickCommand\": [\n\t\t\"./src/commands/clickCommand.js\",\n\t\t\"src_commands_clickCommand_js\"\n\t],\n\t\"./clickCommand.js\": [\n\t\t\"./src/commands/clickCommand.js\",\n\t\t\"src_commands_clickCommand_js\"\n\t]\n};\nfunction webpackAsyncContext(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\treturn Promise.resolve().then(() => {\n\t\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\t\te.code = 'MODULE_NOT_FOUND';\n\t\t\tthrow e;\n\t\t});\n\t}\n\n\tvar ids = map[req], id = ids[0];\n\treturn __webpack_require__.e(ids[1]).then(() => {\n\t\treturn __webpack_require__(id);\n\t});\n}\nwebpackAsyncContext.keys = () => (Object.keys(map));\nwebpackAsyncContext.id = \"./src/commands lazy recursive ^\\\\.\\\\/.*$\";\nmodule.exports = webpackAsyncContext;\n\n//# sourceURL=webpack://getting-started-using-a-configuration/./src/commands/_lazy_^\\.\\/.*$_namespace_object?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// import command from 'js/clickCommand.js';\n\nfunction component() {\n  const element = document.createElement('div');\n\n  element.innerHTML = 'js/clickCommand.js';\n\n  return element;\n}\n\nfunction createAButton() {\n  const button = document.createElement('button');\n  button.title = 'clickMe';\n  button.appendChild(document.createTextNode('clickMe'));\n  button.onclick = async () => {\n    try {\n      // const file = 'js/clickCommand.js';\n      //split\n      const command = await __webpack_require__.e(/*! import() */ \"src_js_clickCommand_js\").then(__webpack_require__.bind(__webpack_require__, /*! js/clickCommand.js */ \"./src/js/clickCommand.js\"));\n      command.default.execute();\n    } catch (err) {\n      console.error(`err loading command module: ${err}`);\n      console.dir(err);\n    }\n\n    console.log('you really clicked!!!');\n  };\n  return button;\n}\n\nfunction container() {\n  const container = document.createElement('div');\n  container.appendChild(component());\n  container.appendChild(createAButton());\n  return container;\n}\ndocument.body.appendChild(container());\n\n\n//# sourceURL=webpack://getting-started-using-a-configuration/./src/js/index.js?");
+eval("// import command from 'js/clickCommand.js';\n\nfunction component() {\n  const element = document.createElement('div');\n\n  element.innerHTML = 'js/clickCommand.js';\n\n  return element;\n}\n\nfunction createAButton() {\n  const button = document.createElement('button');\n  button.title = 'clickMe';\n  button.appendChild(document.createTextNode('clickMe'));\n  button.onclick = async () => {\n    try {\n      const file = 'clickCommand.js';\n      //split\n      const command = await __webpack_require__(\"./src/commands lazy recursive ^\\\\.\\\\/.*$\")(`./${file}`);\n      command.default.execute();\n    } catch (err) {\n      console.error(`err loading command module: ${err}`);\n      console.dir(err);\n    }\n\n    console.log('you really clicked!!!');\n  };\n  return button;\n}\n\nfunction container() {\n  const container = document.createElement('div');\n  container.appendChild(component());\n  container.appendChild(createAButton());\n  return container;\n}\ndocument.body.appendChild(container());\n\n\n//# sourceURL=webpack://getting-started-using-a-configuration/./src/js/index.js?");
 
 /***/ })
 

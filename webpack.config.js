@@ -10,7 +10,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      js: path.resolve(__dirname, 'src/js'),
+      commands: path.resolve(__dirname, 'src/commands'),
     },
   },
 };
