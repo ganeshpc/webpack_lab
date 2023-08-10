@@ -1,9 +1,8 @@
-// import command from 'js/clickCommand.js';
+import command from 'js/clickCommand.js';
 
 function component() {
   const element = document.createElement('div');
 
-  // Lodash, now imported by this script
   element.innerHTML = 'js/clickCommand.js';
 
   return element;
@@ -16,8 +15,8 @@ function createAButton() {
   button.appendChild(document.createTextNode('clickMe'));
   button.onclick = async () => {
     try {
-      const file = 'clickCommand.js';
-      const command = command; //await import(file);
+      // const file = 'js/clickCommand.js';
+      const command = await import('js/clickCommand.js');
     } catch (err) {
       console.error(`err loading command module: ${err}`);
       console.dir(err);
